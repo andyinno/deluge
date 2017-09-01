@@ -10,7 +10,7 @@ RUN apt-get update &&\
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN adduser --system -u 1000 deluge
-EXPOSE 58846 58846
+EXPOSE 58846 8112
 
 VOLUME /config
 VOLUME /data
