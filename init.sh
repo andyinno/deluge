@@ -49,6 +49,8 @@ if [ $AUTHMISSING ]; then
         echo deluge:deluge:10 >>  $CONFIGDIR/auth
 fi
 
+chown deluge:root /config
+
 echo "Starting deluged and deluge-web."
 su -s /bin/bash deluge -c 'deluged -c /config'
 su -s /bin/bash deluge -c 'deluge-web -c /config'
