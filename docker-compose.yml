@@ -1,0 +1,10 @@
+version: '3'
+services:
+  deluge:
+    image: "andyinno/deluge"
+    ports:
+      - "58846:58846"
+      - "8112:8112"
+    volumes:
+     - "/export/disk0/:/data"
+     - "/home/pi/deluge/config:/config"
